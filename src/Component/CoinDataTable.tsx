@@ -97,14 +97,14 @@ const CoinDataTable: React.FC = () => {
         <button
           onClick={() => paginate(currentPage - 1)}
           disabled={currentPage === 1}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l"
+          className="bg-gray-500 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded-l cursor-pointer"
         >
           Previous
         </button>
         <button
           onClick={() => paginate(currentPage + 1)}
           disabled={indexOfLastCoin >= coinTableData.length}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r"
+          className="bg-gray-500 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded-r cursor-pointer"
         >
           Next
         </button>

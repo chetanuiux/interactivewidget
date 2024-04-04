@@ -51,36 +51,32 @@ const CoinPage = () => {
       {!coin ? (
         'Loading'
       ) : (
-        <div className="grid md:grid-cols-[30%_70%] sm:grid-cols-1 gap-4">
-          <div className="grid text-center ">
+        <div className="grid md:grid-cols-[30%_70%] sm:grid-cols-1 gap-4 mt-5 pt-5">
+          <div className="grid text-center">
             <img className="grid justify-self-center"
               src={coin?.image.large}
               alt={coin?.name}
               height="200px"
               style={{ marginBottom: '20px' }}
-            />  
-            <h1 className="text-3xl font-bold">{coin?.name}</h1>
-            <h1 className="text-xl font-md">{coin?.description.en.split('. ')[0]}.</h1>
-            <div>
-              <span>
-                <h1 className="text-2xl font-bold">Position In Market: {coin?.market_cap_rank}</h1>
-              </span>
-              <span>
-                <h1 className="text-2xl font-bold">
+            /> 
+            <div className="px-4 text-left"> 
+            <h1 className="text-3xl font-bold mb-3">{coin?.name}</h1>
+            <p className="text-lg font-md">{coin?.description.en.split('. ')[0]}.</p>
+            <div className="pt-5 "> 
+                <p className="text-2xl font-bold">Position In Market: {coin?.market_cap_rank}</p>
+                <p className="text-2xl font-bold">
                   <span className="text-yellow-500">Current Price</span>: Rs{' '}
                   {numberWithCommas(coin?.market_data.current_price['inr'])}
-                </h1>
-              </span>
-              <span>
-                <h1 className="text-2xl font-bold">
+                </p>
+                <p className="text-2xl font-bold">
                 <span className="text-green-500">Market Cap</span>: Rs{' '}
                   {numberWithCommas(
                     coin?.market_data.market_cap['inr'].toString().slice(0, -6)
                   )}
                   M
-                </h1>
-              </span>
+                </p>
             </div>
+          </div>
           </div>
           <CoinInfo coin={coin} />
         </div>

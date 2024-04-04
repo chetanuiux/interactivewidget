@@ -9,6 +9,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  padding: 0;
+  overflow-x: hidden;
+  #root{
+    overflow-x: hidden;
+    border-radius: 8px;
+  }
 }
 
 code {
